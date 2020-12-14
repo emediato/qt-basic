@@ -1,4 +1,5 @@
 QT += quick
+QT = core gui
 
 CONFIG += c++11
 
@@ -15,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
+        todolist.cpp \
         todomodel.cpp
 
 RESOURCES += qml.qrc
@@ -31,4 +33,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    todolist.h \
     todomodel.h
